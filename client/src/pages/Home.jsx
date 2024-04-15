@@ -1,4 +1,4 @@
-  import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import Cookies from 'js-cookie';
@@ -7,6 +7,8 @@ import { ToastContainer } from "react-toastify";
 import TopCropCard from '../components/TopCropCard'
 import RestCropCards from '../components/RestCropCards'
 import '../util/config'
+import { FaInstagram, FaTwitter } from 'react-icons/fa'; // Import icons from react-icons
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -61,17 +63,42 @@ const Home = () => {
     }
   }, [window.config.id]); // Run whenever window.config.id changes
   
-
   return (
     <>
       <div className="home_page">
-        
         <h4>
           Welcome <span>{username}</span>
         </h4>
         <div className="card_container">
-        {crops.length > 0 && <TopCropCard crop={crops[0]} />}
+          {crops.length > 0 && <TopCropCard crop={crops[0]} />}
           {crops.length > 0 && <RestCropCards crops={crops} />}
+        </div>
+
+        <div className="footer_columns">
+        <div className="contact_details">
+          <p> <h3>Contact</h3></p>
+          <p>Email: your@email.com</p>
+          <p>Phone: +1234567890</p>
+        </div>
+        <div className="footer_row"></div>
+          <div className="footer_column">
+            <h3>Account</h3>
+            <p>
+              <Link to="/signup">Create an account</Link> 
+            </p>
+          </div>
+          <div className="footer_column">
+            <h3>Follow Us</h3>
+            <p className="footer_icons">
+              <a href="https://www.instagram.com">
+                <FaInstagram style={{ fontSize: "24px", marginRight: "10px" }} />
+              </a>
+              <a href="https://www.twitter.com">
+                <FaTwitter style={{ fontSize: "24px" }} />
+              </a>
+            </p>
+          </div>
+
         </div>
       </div>
       <ToastContainer />

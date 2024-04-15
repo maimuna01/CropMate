@@ -6,7 +6,6 @@
   margin: 0;
 }
 
-
 label {
   font-size: 1.2rem;
   color: #656262;
@@ -19,43 +18,48 @@ body {
 }
 
 body {
-  background-color: #fff;
+  background-color: #cad2c5;/* Light gray background */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .form_container {
   background-color: #fff;
-  padding: 2rem 3rem;
+  padding: 20rem 3rem;
+  margin: 5rem 20rem 1rem 5rem; 
   border-radius: 0.5rem;
   width: 100%;
   max-width: 400px;
   box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
 }
 
+
 .form_container > h2 {
   margin-block: 1rem;
   padding-block: 0.6rem;
-  color: rgba(0, 212, 255, 1);
+  color: #84a98c; /* Light green text color */
 }
 
 .form_container > form {
   display: flex;
   flex-direction: column;
   gap: 1.4rem;
+  
 }
 
 .form_container div {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
+  
 }
 
 .form_container input {
   border: none;
   padding: 0.5rem;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #354f52; /* Dark gray border */
   font-size: 1.1rem;
   outline: none;
+  
 }
 
 .form_container input::placeholder {
@@ -64,7 +68,7 @@ body {
 }
 
 .form_container button {
-  background-color: rgba(0, 212, 255, 1);
+  background-color: #2f3e46;
   color: #fff;
   border: none;
   padding: 0.6rem;
@@ -78,33 +82,14 @@ span a {
   color: rgba(0, 212, 255, 1);
 }
 
-.card_container{
+.card_container {
   padding: 2rem;
   padding-left: 4rem;
   padding-right: 4rem;
-
 }
-
-/* .home_page {
-  height: 100vh;
-  width: 100vw;
-  background: #dbdbdb;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-transform: uppercase;
-  font-size: 3rem;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.home_page span {
-  color: rgba(0, 212, 255, 1);
-} */
 
 .home_page button {
-  background-color: rgb(203, 203, 203);
+  background-color: #354f52; /* Dark gray background */
   color: #fff;
   cursor: pointer;
   padding: 1rem 3rem;
@@ -112,15 +97,15 @@ span a {
   border-radius: 2rem;
   transition: ease-in 0.3s;
   border: none;
+  
 }
 
 .home_page button:hover {
   background-color: rgba(0, 212, 255, 1);
 }
 
-
-@media only screen and (max-width: 1200px){
-  .home_page{
+@media only screen and (max-width: 1200px) {
+  .home_page {
     font-size: 1.5rem;
   }
   .home_page button {
@@ -128,3 +113,105 @@ span a {
     font-size: 1.5rem;
   }
 }
+
+.footer_columns {
+  display: flex;
+  justify-content: space-between;
+  background-color: #2f3e46;
+  padding: 20px;
+  margin-top: 20px;
+  border-top: 1px solid #2f3e46;
+  padding-top: 20px;
+  flex-direction: column; /* Stack containers vertically */
+}
+
+.contact_details {
+  flex:1;
+  padding: 20px;
+  color: #cad2c5;
+}
+
+.footer_column {
+  padding: 20px;
+}
+
+.footer_column h3 {
+  color: #cad2c5;
+}
+
+.footer_column p a {
+  color: #cad2c5;
+  text-decoration: none;
+}
+
+.footer_column p a:hover {
+  color: #84a98c;
+  text-decoration: underline;
+}
+
+.footer_column p {
+  margin-top: 10px;
+}
+
+.footer_icons {
+  display: flex;
+  align-items: center;
+}
+.footer_icons a {
+  color: #666;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+
+  
+  
+  
+
+/* Navbar.css */
+
+/* Color Palette */
+:root {
+    --primary-color: #cad2c5; /* Light gray background */
+    --secondary-color: #84a98c; /* Light green text color for the brand */
+    --accent-color-1: #52796f; /* Dark green text color for links */
+    --accent-color-2: #354f52; /* Dark gray text color on hover */
+    --accent-color-3: #2f3e46; /* Dark blue color for the toggle icon */
+}
+
+.navbar {
+    background-color: var(--primary-color);
+}
+
+.navbar-brand {
+    font-size: 1.5rem; /* Larger font size for the brand */
+    color: var(--secondary-color); /* Light green text color for the brand */
+}
+
+.navbar-nav .nav-link {
+    color: var(--accent-color-1); /* Dark green text color for links */
+    margin-right: 15px; /* Add some space between links */
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--accent-color-2); /* Dark gray text color on hover */
+}
+
+.navbar-toggler-icon {
+    color: var(--accent-color-3); /* Dark blue color for the toggle icon */
+}
+
+.btn-outline-transparent {
+    color: var(--secondary-color); /* Light green text color for the logout button */
+}
+
+.btn-outline-transparent:hover {
+    color: var(--accent-color-1); /* Dark green text color on hover */
+}
+
+@media (max-width: 767px) {
+    .navbar-brand {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+    }
+}
+

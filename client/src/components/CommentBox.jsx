@@ -61,8 +61,6 @@ const CommentBox = ({ onCommentSubmit,type,heading, postId }) => {
         content: commentValue
       };
 
-
-
     if(type=="post"){
         onCommentSubmit(postData);
         setCommentValue("");

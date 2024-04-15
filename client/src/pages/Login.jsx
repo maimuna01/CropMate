@@ -70,7 +70,8 @@ const Login = () => {
   };
 
   return (
-    <div className="form_container">
+    
+    <div className="form_container ">
       <h2>Login Account</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-floating">
@@ -84,6 +85,7 @@ const Login = () => {
             onChange={handleOnChange}
           />
           <label htmlFor="email">Email</label>
+          
         </div>
         <div className="form-floating">
           <input
