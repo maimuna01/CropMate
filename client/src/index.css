@@ -18,7 +18,7 @@ body {
 }
 
 body {
-  background-color: #cad2c5;/* Light gray background */
+  background-color: #e74d46;/* Light gray background */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -88,6 +88,11 @@ span a {
   padding-right: 4rem;
 }
 
+.home_page {
+  background-color: #fff /* Set your desired background color */
+}
+
+
 .home_page button {
   background-color: #354f52; /* Dark gray background */
   color: #fff;
@@ -117,7 +122,7 @@ span a {
 .footer_columns {
   display: flex;
   justify-content: space-between;
-  background-color: #2f3e46;
+  background-color: #0f5256;
   padding: 20px;
   margin-top: 20px;
   border-top: 1px solid #2f3e46;
@@ -128,7 +133,7 @@ span a {
 .contact_details {
   flex:1;
   padding: 20px;
-  color: #cad2c5;
+  color: #fff;
 }
 
 .footer_column {
@@ -136,16 +141,16 @@ span a {
 }
 
 .footer_column h3 {
-  color: #cad2c5;
+  color: #fff;
 }
 
 .footer_column p a {
-  color: #cad2c5;
+  color: #fff;
   text-decoration: none;
 }
 
 .footer_column p a:hover {
-  color: #84a98c;
+  color: #f3ac87;
   text-decoration: underline;
 }
 
@@ -162,6 +167,88 @@ span a {
   text-decoration: none;
   margin-right: 10px;
 }
+/* Update.css */
+
+/* Background Image */
+body {
+  background-image: url('path/to/your/background/image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Soil Container */
+.soil_container {
+  padding: 20px;
+  margin: auto;
+  max-width: 800px;
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft box shadow */
+  margin-top: 50px; /* Add margin to push the container down */
+}
+
+.soil_container h3 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form Elements */
+.form-floating {
+  margin-bottom: 20px;
+}
+
+.form-floating input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.form-floating input:focus {
+  outline: none;
+  border-color: #25aae1; /* Highlight border color on focus */
+}
+
+.form-floating label {
+  pointer-events: none; /* Prevent label from being clickable */
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #333;
+  transition: 0.3s ease-in-out;
+}
+
+.form-floating input:focus + label,
+.form-floating input:not(:placeholder-shown) + label {
+  font-size: 12px;
+  top: 0;
+  transform: translateY(0);
+  color: #25aae1; /* Highlight label color on focus or when input has value */
+}
+
+/* Submit Button */
+.col-md-4 button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+  box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+}
+
+.col-md-4 button:hover {
+  background-position: 100% 0;
+}
 
 
   
@@ -169,49 +256,29 @@ span a {
   
 
 /* Navbar.css */
-
-/* Color Palette */
-:root {
-    --primary-color: #cad2c5; /* Light gray background */
-    --secondary-color: #84a98c; /* Light green text color for the brand */
-    --accent-color-1: #52796f; /* Dark green text color for links */
-    --accent-color-2: #354f52; /* Dark gray text color on hover */
-    --accent-color-3: #2f3e46; /* Dark blue color for the toggle icon */
-}
-
-.navbar {
-    background-color: var(--primary-color);
-}
-
 .navbar-brand {
-    font-size: 1.5rem; /* Larger font size for the brand */
-    color: var(--secondary-color); /* Light green text color for the brand */
+  font-size: 1.5rem; /* Larger font size for the brand */
+  color: #e74d46; /* Light green text color for the brand */
+  /* Add custom styles for the brand if needed */
 }
 
 .navbar-nav .nav-link {
-    color: var(--accent-color-1); /* Dark green text color for links */
-    margin-right: 15px; /* Add some space between links */
+  color: #0f5256; /* Dark green text color for links */
+  margin-right: 15px; /* Add some space between links */
+  /* Add custom styles for nav links if needed */
 }
 
 .navbar-nav .nav-link:hover {
-    color: var(--accent-color-2); /* Dark gray text color on hover */
-}
-
-.navbar-toggler-icon {
-    color: var(--accent-color-3); /* Dark blue color for the toggle icon */
+  color: #69ba6b; /* Dark gray text color on hover */
+  /* Add custom styles for nav links on hover if needed */
 }
 
 .btn-outline-transparent {
-    color: var(--secondary-color); /* Light green text color for the logout button */
+  color: #e74d46; /* Light green text color for the logout button */
+  /* Add custom styles for the logout button if needed */
 }
 
 .btn-outline-transparent:hover {
-    color: var(--accent-color-1); /* Dark green text color on hover */
+  color: #0f5256; /* Dark green text color on hover */
+  /* Add custom styles for the logout button on hover if needed */
 }
-
-@media (max-width: 767px) {
-    .navbar-brand {
-        font-size: 1.2rem; /* Adjust font size for smaller screens */
-    }
-}
-
