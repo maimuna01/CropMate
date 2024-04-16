@@ -7,7 +7,7 @@ import { ToastContainer } from "react-toastify";
 import TopCropCard from '../components/TopCropCard'
 import RestCropCards from '../components/RestCropCards'
 import '../util/config'
-import { FaInstagram, FaTwitter } from 'react-icons/fa'; // Import icons from react-icons
+import { FaInstagram, FaTwitter } from 'react-icons/fa'; 
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -53,7 +53,7 @@ const Home = () => {
           // Extract crop names from the response
           const { Crop1, Crop2, Crop3, Crop4, Crop5 } = response.data;
   
-          // Store crop names in an array
+       
           const cropNames = [Crop1, Crop2, Crop3, Crop4, Crop5];
           setCrops(cropNames);
         })
@@ -73,7 +73,22 @@ const Home = () => {
           {crops.length > 0 && <TopCropCard crop={crops[0]} />}
           {crops.length > 0 && <RestCropCards crops={crops} />}
         </div>
-
+        <div className="container">
+          <div className="heading_container">
+          <h2>Need help with plant nutrition?</h2>
+          </div>
+         <div style={{ marginTop: '20px', textAlign: 'center' }}>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/w_x-WDdQdxI"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          </div>
+       </div>
         <div className="footer_columns">
         <div className="contact_details">
           <p> <h3>Contact</h3></p>
@@ -87,6 +102,7 @@ const Home = () => {
               <Link to="/signup">Create an account</Link> 
             </p>
           </div>
+          
           <div className="footer_column">
             <h3>Follow Us</h3>
             <p className="footer_icons">
@@ -98,9 +114,10 @@ const Home = () => {
               </a>
             </p>
           </div>
-
         </div>
       </div>
+
+
       <ToastContainer />
     </>
   );
